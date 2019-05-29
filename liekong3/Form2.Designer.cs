@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.button2 = new System.Windows.Forms.Button();
             this.BSA1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -38,14 +37,14 @@
             this.button8 = new System.Windows.Forms.Button();
             this.Z1 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.JBD2 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
+            this.FBD2 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
+            this.ovalShape3 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.FBD1 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.label1 = new System.Windows.Forms.Label();
-            this.ovalShape3 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.FBD2 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
-            this.JBD2 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.CHU1 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.ovmoveright = new System.Windows.Forms.Timer(this.components);
@@ -58,16 +57,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.train)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderWidth = 7;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 45;
-            this.lineShape1.X2 = 158;
-            this.lineShape1.Y1 = 98;
-            this.lineShape1.Y2 = 98;
-            this.lineShape1.Click += new System.EventHandler(this.lineShape1_Click);
             // 
             // button2
             // 
@@ -161,6 +150,26 @@
             this.shapeContainer2.TabIndex = 9;
             this.shapeContainer2.TabStop = false;
             // 
+            // JBD2
+            // 
+            this.JBD2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.JBD2.Location = new System.Drawing.Point(949, 14);
+            this.JBD2.Name = "JBD2";
+            this.JBD2.Size = new System.Drawing.Size(29, 26);
+            // 
+            // FBD2
+            // 
+            this.FBD2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.FBD2.Location = new System.Drawing.Point(879, 16);
+            this.FBD2.Name = "FBD2";
+            this.FBD2.Size = new System.Drawing.Size(28, 26);
+            // 
+            // ovalShape3
+            // 
+            this.ovalShape3.Location = new System.Drawing.Point(82, 16);
+            this.ovalShape3.Name = "ovalShape3";
+            this.ovalShape3.Size = new System.Drawing.Size(25, 25);
+            // 
             // FBD1
             // 
             this.FBD1.BackColor = System.Drawing.SystemColors.Control;
@@ -178,12 +187,6 @@
             this.label1.Size = new System.Drawing.Size(32, 16);
             this.label1.TabIndex = 10;
             this.label1.Text = "FBD";
-            // 
-            // ovalShape3
-            // 
-            this.ovalShape3.Location = new System.Drawing.Point(82, 16);
-            this.ovalShape3.Name = "ovalShape3";
-            this.ovalShape3.Size = new System.Drawing.Size(25, 25);
             // 
             // label2
             // 
@@ -214,20 +217,6 @@
             this.label4.Size = new System.Drawing.Size(32, 16);
             this.label4.TabIndex = 13;
             this.label4.Text = "FBD";
-            // 
-            // FBD2
-            // 
-            this.FBD2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.FBD2.Location = new System.Drawing.Point(879, 16);
-            this.FBD2.Name = "FBD2";
-            this.FBD2.Size = new System.Drawing.Size(28, 26);
-            // 
-            // JBD2
-            // 
-            this.JBD2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.JBD2.Location = new System.Drawing.Point(949, 14);
-            this.JBD2.Name = "JBD2";
-            this.JBD2.Size = new System.Drawing.Size(29, 26);
             // 
             // timer1
             // 
@@ -306,8 +295,7 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.jing2,
             this.CHU1,
-            this.Z1,
-            this.lineShape1});
+            this.Z1});
             this.shapeContainer1.Size = new System.Drawing.Size(675, 388);
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
@@ -345,7 +333,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Microsoft.VisualBasic.PowerPacks.OvalShape Z1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BSA1;

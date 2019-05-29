@@ -17,10 +17,6 @@ namespace liekong3
             InitializeComponent();
         }
         int stage = 0;
-        private void lineShape1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("1111");
-        }
         public static bool Delay(int delayTime)
         {
             DateTime now = DateTime.Now;
@@ -38,10 +34,10 @@ namespace liekong3
         {
             if(startlo<endlo)
             {
-                for (int i = startlo; i <= endlo+15; i = i + 30)
+                for (int i = startlo; i <= endlo+5; i = i + 30)
                 {
                     os.Location = new System.Drawing.Point(i, y2);
-                    Delay(100);
+                    Delay(30);
                 }
             }
             else
@@ -49,7 +45,7 @@ namespace liekong3
                 for (int i = startlo; i >= endlo - 15; i = i - 30)
                 {
                     os.Location = new System.Drawing.Point(i, y2);
-                    Delay(100);
+                    Delay(30);
                 }
             }
         }
@@ -172,15 +168,7 @@ namespace liekong3
         {
             if (new Form3().ShowDialog(this) == DialogResult.Yes)
             {
-                button1.Enabled = false;
-                button3.Enabled = false;
-                FBD1.BackColor = Control.DefaultBackColor;
-                CHU1.BackColor = Control.DefaultBackColor;
-                Z1.Visible = true;
-                Z1.BackColor = Color.Blue;
-                move(Z1, 70, 598, 284);
-                Z1.Visible = false;
-                JBD2.BackColor = Control.DefaultBackColor;
+                Fuyuan(2);
             }
             else
             {
@@ -192,22 +180,37 @@ namespace liekong3
         {
             if (new Form3().ShowDialog(this) == DialogResult.Yes)
             {
-                button1.Enabled = false;
-                button3.Enabled = false;
-                JBD2.BackColor = Control.DefaultBackColor;
-                FBD2.BackColor = Control.DefaultBackColor;
-                Z1.Visible = true;
-                Z1.BackColor = Color.Blue;
-                move(Z1, 598, 70, 284);
-                Z1.Visible = false;
-                FBD1.BackColor = Control.DefaultBackColor;
-                CHU1.BackColor = Control.DefaultBackColor;
-                
+                Fuyuan(1);
             }
             else
             {
                 MessageBox.Show("请破铅封！");
             }
         }
+        private void Fuyuan(int type)
+        {
+            button1.Enabled = false;
+            button3.Enabled = false;
+            Z1.Visible = true;
+            Z1.BackColor = Color.Blue;
+            if (type == 1)
+            {
+                JBD2.BackColor = Control.DefaultBackColor;
+                FBD2.BackColor = Control.DefaultBackColor;
+                move(Z1, 598, 70, 284);
+                FBD1.BackColor = Control.DefaultBackColor;
+                CHU1.BackColor = Control.DefaultBackColor;
+            }
+            else
+            {
+                FBD1.BackColor = Control.DefaultBackColor;
+                CHU1.BackColor = Control.DefaultBackColor;
+                move(Z1, 70, 598, 284);
+                JBD2.BackColor = Control.DefaultBackColor;
+                FBD2.BackColor = Control.DefaultBackColor;
+            }                
+            Z1.Visible = false;
+            stage = 0;
+        }        
     }
 }
